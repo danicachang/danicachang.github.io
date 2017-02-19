@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=0"/> <!-- prevent zooming-->
+        <title>Slideshow</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="/js/slideshow.js"></script>
+        <link rel="stylesheet" href="/css/styles.css">
+        <script type="text/javascript" src="/js/mainResize.js"></script>
+    </head>
+    <body>
+    <div id="main_container">
+        {% include header.html %}
+        <div id="JustifiedGallery"></div>       
+    </div>
+    <div id="originals">
+        {% for file in site.static_files %}
+            {% if file.path contains 'thumbnail' %}{% else %}
+                {% if file.path contains 'photos/' and file.extname == '.jpg'%}
+                    <a href="/photos/{{file.name}}"><img src="/photos/thumbnails/{{file.name}}" class="thumbnail" /></a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+     
+     
+    <script language="JavaScript">    
+    $(window).load(function() {
+        slideshow.setupSlideshow('getPhotos.php', 1, false);
+    });
+    </script>
+    </body>
+</html>

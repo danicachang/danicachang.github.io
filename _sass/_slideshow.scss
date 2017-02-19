@@ -1,0 +1,98 @@
+.gallery{
+	margin: auto;
+}
+.slideshowMode .thumbnail{
+	padding:3px;
+	cursor: url(/images/zoomIn.png),pointer;
+}
+.galleryMode .thumbnail{
+	padding:6px;
+}
+.galleryMode .photoLabel{
+	padding:6px;
+}
+.galleryRow{
+	position:relative;
+}
+#overlay{
+	position:absolute;
+	width:100%;
+	background: black;
+	opacity:.9;
+	top:0;
+	left:0;
+	display:none;
+}
+.photoLabel{
+	position: absolute; 
+	z-index:10;
+	text-align:center;
+	font-weight:bold;
+	font-size:15px;
+	color:black;
+}
+
+.slideshowBox{
+	position: absolute;
+}
+.arrow{
+	position: absolute;
+	height:100%;
+	z-index:20;
+	opacity:0;
+	cursor: pointer;
+	top:0;
+	width:50px;
+}
+.arrow img{
+	position: absolute;
+	top:50%;
+	margin-top:-22px;	
+}
+.arrow:hover{
+	opacity:.8;
+}
+#close{
+	cursor: pointer;
+	position: absolute;
+	right:0;
+	top:0;
+	opacity:.8 !important;
+	z-index:30;
+	width:50px;
+	height:50px;
+}
+
+#close img{
+	position: absolute;
+	right:0;
+	opacity:.8 !important;
+}
+
+#loading{
+	left:50%;
+	top:50%;
+	margin-top:-22px;
+	margin-left:-22px;
+	position: absolute;
+	opacity:0;
+	z-index:1;
+}
+#loading_horizontal{
+	display: block; 
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#slideshowBox{
+	z-index:5;
+}
+
+body,.unselectable{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
