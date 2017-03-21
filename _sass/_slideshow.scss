@@ -3,7 +3,7 @@
 }
 .slideshowMode .thumbnail{
 	padding:3px;
-	cursor: url(/images/zoomIn.png),pointer;
+	cursor: zoom-in;
 }
 .galleryMode .thumbnail{
 	padding:6px;
@@ -37,17 +37,22 @@
 }
 .arrow{
 	position: absolute;
-	height:100%;
-	z-index:20;
+	height: 100%;
+	z-index: 20;
 	opacity:0;
 	cursor: pointer;
-	top:0;
-	width:50px;
+	top: 0;
+	width: 3rem;
+	font-size: 4rem;
+	color: white;
+	padding: 0 1rem;
+	-webkit-filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+  	filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));
 }
-.arrow img{
+.arrow:before {
 	position: absolute;
-	top:50%;
-	margin-top:-22px;	
+	top: 50%;
+	margin-top: -32px;
 }
 .arrow:hover{
 	opacity:.8;
@@ -59,14 +64,11 @@
 	top:0;
 	opacity:.8 !important;
 	z-index:30;
-	width:50px;
-	height:50px;
-}
-
-#close img{
-	position: absolute;
-	right:0;
-	opacity:.8 !important;
+	font-size: 2rem;
+	padding: .5rem;
+	color: white;
+	-webkit-filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+  	filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));
 }
 
 #loading{

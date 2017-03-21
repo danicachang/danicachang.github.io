@@ -44,9 +44,9 @@ var slideshow = (function(){
 			if(desiredSlideIndex==slideshowIndex) 
 				closeSlideshow();
 		});
-		var next = $("<div>").html($("<img>").attr("src","/images/next.png").css({right:0})).attr("id","next").addClass("arrow unselectable").css({right:0});
-		var prev = $("<div>").html($("<img>").attr("src","/images/prev.png")).attr("id","previous").addClass("arrow unselectable").css({left:0});
-		var close = $("<div>").html($("<img>").attr("src","/images/close.png")).attr("id","close").css("display","none");
+		var next = $("<div>").attr("id","next").addClass("arrow unselectable fa fa-chevron-right").css({right:0});
+		var prev = $("<div>").attr("id","previous").addClass("arrow unselectable fa fa-chevron-left").css({left:0});
+		var close = $("<div>").addClass("fa fa-times-circle").attr("id","close").css("display","none");
 		var loading = $("<img>").attr("src","/images/loading2.gif").attr("id","loading").addClass("unselectable");
 		
 		//next.bind("click",nextSlide);
