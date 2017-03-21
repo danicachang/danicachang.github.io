@@ -90,7 +90,6 @@ var slideshow = (function(){
 		$("#originals").css("display","none");
 		//set up divs
 		$("#JustifiedGallery").html("<div id='Gallery' class='gallery'></div>");
-		if (useAjax) $("#JustifiedGallery").after('<img src="/images/horizontal_loading.gif" alt="loading" id="loading_horizontal" />');
 		
 		$(window).resize(function() { 
 			if (atBottom()) loadMoreImages();
@@ -104,6 +103,8 @@ var slideshow = (function(){
 				lastHeight = $(window).innerHeight();
 				justifiedGallery($("#Gallery"),Infinity, 0,Infinity, maxThumbnailHeight);
 				if (inSlideshow) slideshow();
+				$("#loading_horizontal").hide();
+				$("#JustifiedGallery").css('opacity', '1');
 			}
 		});
 		$(window).resize();

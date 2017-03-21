@@ -1,8 +1,12 @@
 .gallery * {
 	box-sizing: content-box;
 }
+#JustifiedGallery {
+	opacity: 0;
+	transition: opacity .5s;
+}
 .slideshowMode .thumbnail{
-	padding:3px;
+	padding: 3px;
 	cursor: zoom-in;
 }
 .galleryMode .thumbnail{
@@ -82,13 +86,13 @@
 }
 #loading_horizontal{
 	display: block; 
-	margin-top:20px;
-	margin-bottom:20px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 40vh auto;
 }
 #slideshowBox{
 	z-index:5;
+}
+#originals {
+	display: none;
 }
 
 body,.unselectable{
