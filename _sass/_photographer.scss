@@ -1,0 +1,52 @@
+.photographer {
+    width: 100%;
+    position: relative;
+    &:after {
+        padding-top: 60%;
+        /* 16:9 ratio */
+        display: block;
+        content: '';
+    }
+    .container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+
+        @include mobile {
+            flex-flow: row wrap;
+            a, .img-container {
+                width: 100%;
+            }
+        }
+    }
+    a {
+        margin: 3px;
+        display: flex;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .top {
+        align-items: flex-start;
+    }
+    .middle {
+        align-items: center;
+    }
+    .bottom {
+        align-items: flex-end;
+    }
+    .img-container {
+        position: relative;
+    }
+    .caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 3rem 1rem 0rem;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5));
+    }
+}

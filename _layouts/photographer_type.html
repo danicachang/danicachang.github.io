@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Danica Chang - Photographer
-permalink: /photography/
 ---
 
 <div id="JustifiedGallery" class="gallery"></div>      
 <div id="originals">
     {% for file in site.static_files %}
         {% if file.path contains 'thumbnail' %}{% else %}
-            {% if file.path contains 'photos/' and file.extname == '.jpg'%}
-                <a href="/photos/{{file.name}}"><img src="/photos/thumbnails/{{file.name}}" class="thumbnail" /></a>
+            {% capture path %}photos/{{ page.photoType }}{% endcapture %}
+            {% if file.path contains path and file.extname == '.jpg'%}
+                <a href="/photos/{{ page.photoType }}/{{file.name}}"><img src="/photos/{{ page.photoType }}/thumbnails/{{file.name}}" class="thumbnail" /></a>
             {% endif %}
         {% endif %}
     {% endfor %}
 </div>
+<script type="text/javascript" src="/js/slideshow.js"></script>
 <script language="JavaScript">    
 $(window).load(function() {
     slideshow.setupSlideshow('getPhotos.php', 1, false);

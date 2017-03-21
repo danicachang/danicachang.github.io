@@ -3,6 +3,9 @@
     position: relative;
     height: 5rem;
     transition: height 1s;
+    @include desktop {
+        margin-bottom: 1rem;
+    }
     &.active {
         height: 12rem;
     }
