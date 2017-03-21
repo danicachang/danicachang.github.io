@@ -44,10 +44,10 @@ var slideshow = (function(){
 			if(desiredSlideIndex==slideshowIndex) 
 				closeSlideshow();
 		});
-		var next = $("<div>").html($("<img>").attr("src","images/next.png").css({right:0})).attr("id","next").addClass("arrow unselectable").css({right:0});
-		var prev = $("<div>").html($("<img>").attr("src","images/prev.png")).attr("id","previous").addClass("arrow unselectable").css({left:0});
-		var close = $("<div>").html($("<img>").attr("src","images/close.png")).attr("id","close").css("display","none");
-		var loading = $("<img>").attr("src","images/loading2.gif").attr("id","loading").addClass("unselectable");
+		var next = $("<div>").html($("<img>").attr("src","/images/next.png").css({right:0})).attr("id","next").addClass("arrow unselectable").css({right:0});
+		var prev = $("<div>").html($("<img>").attr("src","/images/prev.png")).attr("id","previous").addClass("arrow unselectable").css({left:0});
+		var close = $("<div>").html($("<img>").attr("src","/images/close.png")).attr("id","close").css("display","none");
+		var loading = $("<img>").attr("src","/images/loading2.gif").attr("id","loading").addClass("unselectable");
 		
 		//next.bind("click",nextSlide);
 		//prev.bind("click",previousSlide);
@@ -90,7 +90,7 @@ var slideshow = (function(){
 		$("#originals").css("display","none");
 		//set up divs
 		$("#JustifiedGallery").html("<div id='Gallery' class='gallery'></div>");
-		if (useAjax) $("#JustifiedGallery").after('<img src="images/horizontal_loading.gif" alt="loading" id="loading_horizontal" />');
+		if (useAjax) $("#JustifiedGallery").after('<img src="/images/horizontal_loading.gif" alt="loading" id="loading_horizontal" />');
 		
 		$(window).resize(function() { 
 			if (atBottom()) loadMoreImages();
@@ -535,7 +535,7 @@ var slideshow = (function(){
 			$("#slideshowBox").css("opacity","1");	//open slideshow box
 			
 			var thumbnail = photos.eq(slideshowIndex);
-			var loading = $("<img>").attr("src","images/loading2.gif").attr("id","loadingOverThumbnail").addClass("unselectable");
+			var loading = $("<img>").attr("src","/images/loading2.gif").attr("id","loadingOverThumbnail").addClass("unselectable");
 			loading.css({
 				position: "absolute",
 				left: thumbnail.offset().left + thumbnail.width()/2 - 22,

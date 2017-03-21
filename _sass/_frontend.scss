@@ -1,0 +1,31 @@
+.frontend {
+    section {
+        padding: 3rem 0;
+        display: flex;
+        flex-flow: row wrap;
+        > * {
+            width: 100%;
+            @include desktop {
+                width: 50%;
+                padding: 1.5rem;
+            }
+        }
+        @include desktop {
+            &:nth-child(odd) {
+                .screenshot {
+                    order: 10;
+                }
+            }
+        }
+    }
+    img {
+        width: 100%;
+    }
+    .content {
+        padding: 0 1rem;
+        width: 50%;
+    }
+    .technologies {
+        margin: 0;
+    }
+}

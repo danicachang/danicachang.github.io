@@ -1,21 +1,61 @@
 ---
 ---
+@import url('https://fonts.googleapis.com/css?family=Italianno');
+@import "media_queries";
+@import "header";
 @import "slideshow";
+@import "frontend";
 
-#main_container{
-	margin-left: 30px;
-	margin-right: 30px;
+html {
+    color: #444;
+    font-family: sans-serif;
 }
-			
-#header{
-	margin-left: 5px;
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Italianno', cursive;
+    margin: 1rem 0 0 0;
 }
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+.main_container{
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+}
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+* {
+  box-sizing: border-box;
+}
+
 #nameHeader{
-	float:left;
+    float:left;
 }
 #fullLinks img{
-	float:right;
-	clear:right;
+    float:right;
+    clear:right;
 }
 #compressedLinks img{
 }

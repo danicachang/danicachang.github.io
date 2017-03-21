@@ -4,32 +4,21 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, user-scalable=0"/> <!-- prevent zooming-->
-        <title>Slideshow</title>
+        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+        <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.js"></script>
         <script type="text/javascript" src="/js/slideshow.js"></script>
+        <script type="text/javascript" src="/js/nav.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/styles.css">
-        <script type="text/javascript" src="/js/mainResize.js"></script>
+
     </head>
     <body>
-    <div id="main_container">
+    <div class="main_container">
         {% include header.html %}
-        <div id="JustifiedGallery"></div>       
-    </div>
-    <div id="originals">
-        {% for file in site.static_files %}
-            {% if file.path contains 'thumbnail' %}{% else %}
-                {% if file.path contains 'photos/' and file.extname == '.jpg'%}
-                    <a href="/photos/{{file.name}}"><img src="/photos/thumbnails/{{file.name}}" class="thumbnail" /></a>
-                {% endif %}
-            {% endif %}
-        {% endfor %}
+        {{ content }}
     </div>
      
      
-    <script language="JavaScript">    
-    $(window).load(function() {
-        slideshow.setupSlideshow('getPhotos.php', 1, false);
-    });
-    </script>
     </body>
 </html>

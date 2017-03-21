@@ -1,5 +1,5 @@
-.gallery{
-	margin: auto;
+.gallery * {
+	box-sizing: content-box;
 }
 .slideshowMode .thumbnail{
 	padding:3px;
