@@ -4,7 +4,8 @@ layout: default
 <img src="/images/horizontal_loading.gif" alt="loading" id="loading_horizontal" />
 <div id="JustifiedGallery" class="gallery"></div>      
 <div id="originals">
-    {% for file in site.static_files %}
+{% assign files = site.static_files | reverse %}
+    {% for file in files %}
         {% if file.path contains 'thumbnail' %}{% else %}
             {% capture path %}photos/{{ page.photoType }}{% endcapture %}
             {% if file.path contains path and file.extname == '.jpg'%}

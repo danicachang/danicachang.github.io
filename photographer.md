@@ -20,7 +20,7 @@ permalink: /photographer/
         </a>
         <a href="/photographer/food" class="bottom">
             <div class="img-container">
-                <img src="/photos/20120916-012.jpg" alt="food">
+                <img src="/photos/20130723-041.jpg" alt="food">
                 <h1 class="caption">Food</h1>
             </div>
         </a>
