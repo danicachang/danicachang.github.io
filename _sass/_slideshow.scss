@@ -9,12 +9,6 @@
 	padding: 3px;
 	cursor: zoom-in;
 }
-.galleryMode .thumbnail{
-	padding:6px;
-}
-.galleryMode .photoLabel{
-	padding:6px;
-}
 .galleryRow{
 	position:relative;
 }
@@ -25,6 +19,7 @@
 	opacity:.9;
 	top:0;
 	left:0;
+	z-index: 5;
 	display:none;
 }
 .photoLabel{
@@ -63,7 +58,7 @@
 }
 #close{
 	cursor: pointer;
-	position: absolute;
+	position: fixed;
 	right:0;
 	top:0;
 	opacity:.8 !important;

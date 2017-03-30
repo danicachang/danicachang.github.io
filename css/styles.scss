@@ -1,14 +1,19 @@
 ---
 ---
+$dark: #444;
+$light: #aaa;
+
 @import url('https://fonts.googleapis.com/css?family=Italianno');
 @import "media_queries";
 @import "header";
 @import "slideshow";
+@import "homepage";
 @import "photographer";
 @import "frontend";
 
+
 html {
-    color: #444;
+    color: $dark;
     font-family: sans-serif;
 }
 

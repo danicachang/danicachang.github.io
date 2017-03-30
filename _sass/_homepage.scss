@@ -1,0 +1,103 @@
+.homepage {
+    display: flex;
+    flex-wrap: wrap;
+    .section {
+        padding: 1rem 0 0;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+        @include desktop() {
+            width: 50%;
+            padding: 1rem;
+        }
+        &:hover {
+            h1 {
+                font-size: 7em;
+                color: darken($dark, 50%);
+            }
+            .gallery, code {
+                opacity: .7;
+            }
+        }
+    }
+    h1 {
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        opacity: 0;
+        color: $dark;
+        font-size: 3.7em;
+        transition: opacity 2s, font-size 0.5s, color 0.5s;
+        @include desktop() {
+            font-size: 6em;
+        }
+        &.show {
+            opacity: 1;
+        }
+    }
+    .gallery {
+        opacity: .7;
+        transition: opacity .5s;
+
+        &.dim {
+            opacity: .4;
+        }
+        a {
+            pointer-events: none;
+            opacity: 0;
+            transition: all 1s;
+        }
+        .show-all-images a {
+            opacity: 1;
+        }
+    }
+    .thumbnail {
+        margin: 2px;
+    }
+    pre {
+        margin: 0;
+        @include desktop {
+            font-size: 1.5rem;
+        }
+    }
+    code {
+        display: inline-block;
+        padding: 0;
+        min-height: 10rem;
+        &.dim {
+            opacity: .4;
+        }
+    }
+    .typed-cursor{
+        color: $dark !important;
+        opacity: 1;
+        animation: blink 1s infinite;
+    }
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 100;
+    pointer-events: none;
+    animation: fadeout 3s forwards;
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

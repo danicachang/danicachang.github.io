@@ -28,7 +28,9 @@ permalink: /frontend/
 		<div class="screenshot"><a href="http://custommade.com" target="_blank"><img src="/images/custommade.png" alt="CustomMade Homepage"></a></div>
 		<div>
 			<h1>Custommade</h1>
-			Custommade is a two-sided marketplace that helps to connect artisan craftsman with customers to create custom items, from jewelery to furniture. Using Backbone.js, I built intuitive interfaces for customers to request custom merchendise and make payments. I designed A/B tests to test the efficiency of new features.
+			<p>Custommade is a two-sided marketplace that helps to connect artisan craftsman with customers to create custom items, from jewelery to furniture. Using Backbone.js, I built intuitive interfaces for customers to request custom merchendise and make payments. I designed A/B tests to test the efficiency of new features.</p>
+
+			<p>As an interview coding project, I built an interactive <a href="http://people.csail.mit.edu/d_chang/mosaic/mosaic.html">photo collage generator</a>.</p>
 
 			<h2>Technologies</h2>
 			<ul class="technologies">
