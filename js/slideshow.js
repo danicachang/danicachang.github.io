@@ -188,7 +188,7 @@ var slideshow = (function(){
     
     function initSwipe(){
         $(".slideshowBox").on('touchstart mousedown',function(e) {
-            console.log(e);
+            //console.log(e);
             if (e.type=="touchstart" || e.which == 1){  // touch or left mouse button
                 startTime = jQuery.now();
                 e.preventDefault();
@@ -520,6 +520,7 @@ var slideshow = (function(){
         $('body,html').stop(); //stop animations
         $("#loadingOverThumbnail").remove();
         var image = $("<img>").attr("src",$("#originals").children("a").eq(slideshowIndex).attr("href")).addClass('slideshow');
+        image.on("contextmenu", function(){ return false; });
         
         //load next and previous image
         if(slideshowIndex>0){
