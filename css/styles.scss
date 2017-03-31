@@ -10,6 +10,7 @@ $light: #aaa;
 @import "homepage";
 @import "photographer";
 @import "frontend";
+@import "about";
 
 
 html {
@@ -27,6 +28,14 @@ h1 {
 }
 h2 {
     font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #498fd8;
+    &:hover {
+        color: darken(#498fd8, 20%);
+    }
 }
 
 .main_container{
