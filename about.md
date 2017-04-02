@@ -7,7 +7,7 @@ permalink: /about/
     <img src="/photos/danica-chang.jpg" alt="Danica Chang" class="profile">
 
     <h1>About me</h1>
-    After finishing my degress in Computer Science at MIT and Berkeley, I've worked as a front-end engineer at a variety of different start-ups. I'm passionate about building responsive, interactive, and intuitive user interfaces. I'm currently working remotely from various locations in the US and am interested in remote freelance opportunities.<br><br>
+    After finishing my degrees in Computer Science at MIT and Berkeley, I've worked as a front-end engineer at a variety of different start-ups. I'm passionate about building responsive, interactive, and intuitive user interfaces. I'm currently working remotely from various locations in the US and am interested in remote freelance opportunities.<br><br>
 
     In my free time I enjoy  <a href="/photographer/places">traveling</a>, taking  <a href="/photographer">photos</a>, skiing, hiking, rock climbing, sailing, and eating <a href="/photographer/food">tasty food</a>.<br><br>
 
