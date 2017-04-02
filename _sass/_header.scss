@@ -21,9 +21,16 @@
             width: 26px;
             text-align: center;
         }
+        &:hover {
+            color: $dark;
+        }
     }
     .current {
         color: $dark;
+    }
+    h1 {
+        display: inline-block;
+        margin: 0;
     }
     .logo {
         color: $dark;
@@ -81,7 +88,7 @@
 
         @include desktop{
             display: inline-block;
-            font-family: 'Italianno', cursive;
+            font-family:  $cursive;
         }
     }
 

@@ -1,19 +1,22 @@
 .photographer {
     width: 100%;
     position: relative;
-    &:after {
-        padding-top: 60%;
-        /* 16:9 ratio */
-        display: block;
-        content: '';
-    }
-    .container {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: flex;
+    @include desktop {
+        &:after {
+            padding-top: 60%;
+            /* 16:9 ratio */
+            display: block;
+            content: '';
+        }
 
-        @include mobile {
+        .container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+    }
+    @include mobile {
+        .container {
             flex-flow: row wrap;
             a, .img-container {
                 width: 100%;

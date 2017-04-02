@@ -43,7 +43,7 @@ _.foreach(images, function (image) {\n\
 
 $(window).load(function() {
     var isMobile = $(window).width() < 768;
-    var headerHeight = 125;
+    var headerHeight = 185;
 
     addCode($('code'), showImageCode, fadeInImages);
 

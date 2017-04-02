@@ -610,7 +610,7 @@ var slideshow = (function(){
                 setSlideShowImageSize(image);
                 
                 $("#slideshowBox").css({
-                    "margin-top": -.5*image.height() + $(window).scrollTop(),
+                    "margin-top": -.5*image.height(),
                     "margin-left": -.5*image.width(),
                     top:$(window).height()/2,
                     left:$(window).width()/2

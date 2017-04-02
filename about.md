@@ -4,6 +4,30 @@ title: About Danica Chang
 permalink: /about/
 ---
 <div class="about">
+    <img src="/photos/danica-chang.jpg" alt="Danica Chang" class="profile">
+
+    <h1>About me</h1>
+    After finishing my degress in Computer Science at MIT and Berkeley, I've worked as a front-end engineer at a variety of different start-ups. I'm passionate about building responsive, interactive, and intuitive user interfaces. I'm currently working remotely from various locations in the US and am interested in remote freelance opportunities.<br><br>
+
+    In my free time I enjoy  <a href="/photographer/places">traveling</a>, taking  <a href="/photographer">photos</a>, skiing, hiking, rock climbing, sailing, and eating <a href="/photographer/food">tasty food</a>.<br><br>
+
+    <div class="center">
+        <a href="mailto:danicachang@gmail.com" target="_blank" class="button">
+            <i class="fa fa-envelope"></i>
+            Email me
+        </a>
+        <a href="https://www.linkedin.com/in/danica-chang-47b69161/" target="_blank" class="button">
+            <i class="fa fa-linkedin-square"></i>
+            LinkedIn
+        </a>
+        {% comment %}
+        <a href="" target="_blank" class="button">
+            <i class="fa fa-file-text"></i>
+            View my resume
+        </a>
+        {% endcomment %}
+    </div>
+
     <h1>Education</h1>
     <h3>Massachusetts Institute of Technology</h3> M.S. in Electrical Engineering and Computer Science focusing on Human Computer Interactions<br><br>
     <h3>Univeristy of California Berkeley</h3>  B.S. in Electrical Engineering and Computer Science
@@ -21,5 +45,6 @@ permalink: /about/
     Received 1st place at the <a href="http://esg01.eecs.berkeley.edu/natcar/results.html">2010 Natcar competition</a>, in which we built an autonomous toy car to navigate a course. <a href="http://esg01.eecs.berkeley.edu/natcar/2010-video/hq/1st.mp4">Watch a video of our car in action!</a><br><br>
 
     <h3>Best website award</h3>
-    I was the webmaster of my high school robotics team's website, which won numerous awards including the 2008 Championship Best Website Award, given by FIRST Robotics Competition.  <a href="https://web.archive.org/web/20080509071600/http://www.mvrt.com/2008/clear.php">Here's what it roughly looked like at the time</a>
+    I was the webmaster of my high school robotics team's website, which won numerous awards including the 2008 Championship Best Website Award, given by FIRST Robotics Competition.  <a href="https://web.archive.org/web/20080509071600/http://www.mvrt.com/2008/clear.php">Here's what it roughly looked like at the time.</a>
+
 </div>

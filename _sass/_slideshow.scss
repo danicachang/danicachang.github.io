@@ -13,7 +13,7 @@
 	position:relative;
 }
 #overlay{
-	position:absolute;
+	position: fixed;
 	width:100%;
 	background: black;
 	opacity:.9;
@@ -32,7 +32,7 @@
 }
 
 .slideshowBox{
-	position: absolute;
+	position: fixed;
 }
 .arrow{
 	position: absolute;
@@ -88,12 +88,4 @@
 }
 #originals {
 	display: none;
-}
-
-body,.unselectable{
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }

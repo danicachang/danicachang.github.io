@@ -4,8 +4,8 @@ title: Danica Chang - Photographer
 permalink: /photographer/
 ---
 
-<div class="photographer">
-    <div class="container">
+<div class="photographer unselectable">
+    <div class="container flex">
         <a href="/photographer/places" class="top">
             <div class="img-container">
                 <img src="/photos/20111109-0189.jpg" alt="places">
