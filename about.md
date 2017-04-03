@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Danica Chang
+title: Danica Chang - About
 permalink: /about/
 ---
 <div class="about">
