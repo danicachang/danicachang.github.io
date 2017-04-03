@@ -98,7 +98,9 @@ bodyClass: gray
             case 1: addCode($('code'), loadImageCode); break;
             case 2:
                 $('#loading_imgs').css('display', 'block');
-                addCode($('code'), showImageCode);
+                setTimeout(function() {
+                    addCode($('code'), showImageCode);
+                }, 1000);
                 break;
             case 3: fadeInImages(); break;
             case 4: addCode($('code'), showEngineerTextCode); break;
