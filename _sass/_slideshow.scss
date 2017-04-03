@@ -80,8 +80,11 @@
 	z-index:1;
 }
 .loading_horizontal{
-	display: block; 
-	margin: 40vh auto;
+	display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #slideshowBox{
 	z-index:5;

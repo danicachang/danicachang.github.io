@@ -12,7 +12,7 @@ bodyClass: gray
         <pre><code class="javascript"></code></pre>
     </a>
     <a href="/photographer/" class="section">
-        <img src="/images/horizontal_loading.gif" alt="loading" id="loading_horizontal" class="hide loading_horizontal" />
+        <img src="/images/horizontal_loading.gif" alt="loading" id="loading_imgs" class="hide loading_horizontal" />
         <h1 id="photographer-header">photographer</h1>
         <div id="JustifiedGallery" class="gallery"></div>
     </a>
@@ -30,18 +30,20 @@ bodyClass: gray
 <script type="text/javascript" src="/js/slideshow.js"></script>
 <script language="JavaScript">
     var showImagesOnComplete = false;
+    var state = 0;
+
+    var loadImageCode ="var images = loadAllImages();\n\n";
+
     var showImageCode =
-"var images = loadAllImages();\n\
- \n\
-_.foreach(images, function (image) {\n\
+"_.foreach(images, function (image) {\n\
   image.show();\n\
 });";
 
-    var showEngineerTextCode = "\n\n\ndisplayText('front-end engineer');"
+    var showEngineerTextCode = "\n\n\ndisplayText('front-end engineer');\n\n"
 
-    var showPhotographerTextCode = "\n\ndisplayText('photographer');";
+    var showPhotographerTextCode = "displayText('photographer');";
 
-    addCode($('code'), showImageCode, fadeInImages);
+    nextStep();
 
     $(window).load(function() {
         var isMobile = $(window).width() < 768;
@@ -75,9 +77,9 @@ _.foreach(images, function (image) {\n\
         var images = $('.gallery a');
         if (!images.length) {
             showImagesOnComplete = true;
-            $('#loading_horizontal').css('display', 'block');
             return;
         }
+        $('#loading_imgs').css('display', 'none');
         var cursor = $('<span>').text('|');
         var i = 0;
         var imageInterval = setInterval(function () {
@@ -85,18 +87,42 @@ _.foreach(images, function (image) {\n\
             i++;
             if (i >= images.length) {
                 clearInterval(imageInterval);
-                addCode($('code'), showEngineerTextCode, showTextEngineer);
+                nextStep();
             }
         }, 400);
     }
 
-
-    function addCode(container, code, onComplete) {
-        var prevCode = container.text().slice(0, -1);
-        typeCode(container, prevCode + code, prevCode.length, onComplete);
+    function nextStep() {
+        state++;
+        switch (state) {
+            case 1: addCode($('code'), loadImageCode); break;
+            case 2:
+                $('#loading_imgs').css('display', 'block');
+                addCode($('code'), showImageCode);
+                break;
+            case 3: fadeInImages(); break;
+            case 4: addCode($('code'), showEngineerTextCode); break;
+            case 5: 
+                $('#engineer-header').addClass('show');
+                $('code').addClass('dim');
+                setTimeout(function() {
+                    addCode($('code'), showPhotographerTextCode);
+                }, 1000);
+                break;
+            case 6:
+                $('#photographer-header').addClass('show');
+                $('.gallery').addClass('dim show-all-images');
+                break;
+        }
     }
 
-    function typeCode(container, code, i, onComplete) {
+
+    function addCode(container, code) {
+        var prevCode = container.text().slice(0, -1);
+        typeCode(container, prevCode + code, prevCode.length);
+    }
+
+    function typeCode(container, code, i) {
 
         container.html(code.substring(0, i));
 
@@ -104,24 +130,12 @@ _.foreach(images, function (image) {\n\
             var waitTime = code.charAt(i) === ' '? 100:  40;
             container.append('|');
             setTimeout(function() {
-                typeCode(container, code, i+1, onComplete);
+                typeCode(container, code, i+1);
             }, waitTime);
         } else {
             container.append('<span class="typed-cursor">|</span>');
-            onComplete();
+            nextStep();
         }
         hljs.highlightBlock(container.get(0));
-    }
-
-    function showTextEngineer() {
-        $('#engineer-header').addClass('show');
-        $('code').addClass('dim');
-        setTimeout(function() {
-            addCode($('code'), showPhotographerTextCode, showTextPhotographer);
-        }, 1000);
-    }
-    function showTextPhotographer() {
-        $('#photographer-header').addClass('show');
-        $('.gallery').addClass('dim show-all-images');
     }
 </script>
