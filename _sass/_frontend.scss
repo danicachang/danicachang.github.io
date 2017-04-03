@@ -1,6 +1,6 @@
 .frontend {
     @include desktop {
-        p {
+        .intro {
             padding: 0 1rem;
         }
     }
@@ -16,7 +16,7 @@
             }
         }
         @include desktop {
-            &:nth-child(odd) {
+            &:nth-child(even) {
                 .screenshot {
                     order: 10;
                 }
@@ -32,5 +32,10 @@
     }
     .technologies {
         margin: 0;
+    }
+    .fa-external-link {
+        font-size: 1rem;
+        margin-left: .5rem;
+        display: inline-block;
     }
 }
