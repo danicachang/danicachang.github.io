@@ -97,7 +97,7 @@ var slideshow = (function(){
         //set up divs
         $("#JustifiedGallery").html("<div id='Gallery' class='gallery'></div>");
         
-        $(window).resize(function() { 
+        $(window).resize(function() {
             if (atBottom()) loadMoreImages();
             var nowWidth = $("#JustifiedGallery").innerWidth();
             var nowHeight = $(window).innerHeight();
@@ -442,11 +442,11 @@ var slideshow = (function(){
                 galleryRow.height(currentHeight + margin*2);
                 modifyGalleryHeight(gallery,galleryRow,maxHeight);
                 break;
-            }   
+            }
             
         }
         
-        if (slideshowIndex == -1){  // gallery mode     
+        /*if (slideshowIndex == -1){  // gallery mode
             //add labels for gallery items
             $(".thumbnail").each(function(){ 
                 var label = $("<div />").addClass("photoLabel").html($(this).attr("alt"));
@@ -463,7 +463,7 @@ var slideshow = (function(){
                 }).get();
                 $(this).height($(this).height() + Math.max.apply(Math,(heights)));
             });
-        }
+        }*/
                 
         if (photoIndex == stopIndex || gallery.height() > maxHeight){   // if next image is the slideshow image or too tall (last row contains incomplete row), remove last row
             galleryRow.remove();    //remove last row
@@ -477,8 +477,8 @@ var slideshow = (function(){
     function modifyGalleryHeight(gallery,galleryRow,maxHeight){
         
         if(maxHeight < Infinity){   // if we want the gallery a specific height (like for the sideGallery)
-            var heightDiff = gallery.height() - maxHeight;  
-            console.log("Height Diff = "+heightDiff);                   
+            var heightDiff = gallery.height() - maxHeight;
+            console.log("Height Diff = "+heightDiff);
             if (heightDiff==0){ // if exactly the right height
                 console.log("SUCCESS");
                 success = true;
@@ -495,7 +495,7 @@ var slideshow = (function(){
                         var newHeight = row.height() + 1;
                     images.each(function(){ $(this).height(newHeight-margin*2);}); // set new height of the last row
                     row.height(newHeight);
-                    heightDiff = gallery.height() - maxHeight;  
+                    heightDiff = Math.round(gallery.height() - maxHeight);
                 }
                 console.log("SUCCESS"+"  Height Diff = "+heightDiff);
                 success = true;

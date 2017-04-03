@@ -28,6 +28,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
         margin: 0;
         opacity: 0;
         color: $dark;
@@ -62,13 +63,16 @@
     pre {
         margin: 0;
         @include desktop {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
     code {
         display: inline-block;
         padding: 0;
         min-height: 10rem;
+        @include mobile {
+            height: calc((100vh - 200px) / 2);
+        }
         &.dim {
             opacity: .4;
         }
