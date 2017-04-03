@@ -1,13 +1,18 @@
 .frontend {
+    @include desktop {
+        p {
+            padding: 0 1rem;
+        }
+    }
     section {
-        padding: 1rem 0 3rem;
+        padding: 0 0 3rem;
         display: flex;
         flex-flow: row wrap;
         > * {
             width: 100%;
             @include desktop {
                 width: 50%;
-                padding: 1.5rem;
+                padding: 1rem;
             }
         }
         @include desktop {

@@ -7,14 +7,14 @@ permalink: /about/
     <img src="/photos/danica-chang.jpg" alt="Danica Chang" class="profile">
 
     <h1>About me</h1>
-    After finishing my degrees in Computer Science at MIT and Berkeley, I've worked as a front-end engineer at a variety of different start-ups. I'm passionate about building responsive, interactive, and intuitive user interfaces. I'm currently working remotely from various locations in the US and am interested in remote freelance opportunities.<br><br>
+    <p>Since finishing my degrees in Computer Science at MIT and Berkeley, I've worked as a front-end engineer at several different start-ups. I'm passionate about building responsive, interactive, and intuitive user interfaces. I'm currently working remotely from various locations in the US and am interested in remote freelance opportunities.</p>
 
-    In my free time I enjoy  <a href="/photographer/places">traveling</a>, taking  <a href="/photographer">photos</a>, skiing, hiking, rock climbing, sailing, and eating <a href="/photographer/food">tasty food</a>.<br><br>
+    <p>In my free time I enjoy  <a href="/photographer/places">traveling</a>, taking  <a href="/photographer">photos</a>, skiing, hiking, rock climbing, sailing, and eating <a href="/photographer/food">tasty food</a>.</p>
 
     <div class="center">
         <a href="mailto:danicachang@gmail.com" target="_blank" class="button">
             <i class="fa fa-envelope"></i>
-            Email me
+            Email
         </a>
         <a href="https://www.linkedin.com/in/danica-chang-47b69161/" target="_blank" class="button">
             <i class="fa fa-linkedin-square"></i>
@@ -29,8 +29,10 @@ permalink: /about/
     </div>
 
     <h1>Education</h1>
-    <h3>Massachusetts Institute of Technology</h3> M.S. in Electrical Engineering and Computer Science focusing on Human Computer Interactions<br><br>
-    <h3>Univeristy of California Berkeley</h3>  B.S. in Electrical Engineering and Computer Science
+    <h3>Massachusetts Institute of Technology</h3>
+    <p>M.S. in Electrical Engineering and Computer Science focusing on Human Computer Interactions</p>
+    <h3>Univeristy of California Berkeley</h3>
+    <p>B.S. in Electrical Engineering and Computer Science</p>
 
 
     <h1>Publications</h1>
@@ -42,9 +44,9 @@ permalink: /about/
 
     <h1>Awards</h1>
     <h3>Natcar</h3>
-    Received 1st place at the <a href="http://esg01.eecs.berkeley.edu/natcar/results.html">2010 Natcar competition</a>, in which we built an autonomous toy car to navigate a course. <a href="http://esg01.eecs.berkeley.edu/natcar/2010-video/hq/1st.mp4">Watch a video of our car in action!</a><br><br>
+    <p>Received 1st place at the <a href="http://esg01.eecs.berkeley.edu/natcar/results.html">2010 Natcar competition</a>, in which we built an autonomous toy car to navigate a course. <a href="http://esg01.eecs.berkeley.edu/natcar/2010-video/hq/1st.mp4">Watch a video of our car in action!</a></p>
 
     <h3>Best website award</h3>
-    I was the webmaster of my high school robotics team's website, which won numerous awards including the 2008 Championship Best Website Award, given by FIRST Robotics Competition.  <a href="https://web.archive.org/web/20080509071600/http://www.mvrt.com/2008/clear.php">Here's what it roughly looked like at the time.</a>
+    <p>I was the webmaster of my high school robotics team's website, which won numerous awards including the 2008 Championship Best Website Award, given by FIRST Robotics Competition.  <a href="https://web.archive.org/web/20080509071600/http://www.mvrt.com/2008/clear.php">Here's what it roughly looked like at the time.</a></p>
 
 </div>
