@@ -47,6 +47,6 @@ permalink: /about/
     <p>Received 1st place at the <a href="http://esg01.eecs.berkeley.edu/natcar/results.html">2010 Natcar competition</a>, in which we built an autonomous toy car to navigate a course. <a href="http://esg01.eecs.berkeley.edu/natcar/2010-video/hq/1st.mp4">Watch a video of our car in action!</a></p>
 
     <h3>Best website award</h3>
-    <p>I was the webmaster of my high school robotics team's website, which won numerous awards including the 2008 Championship Best Website Award, given by FIRST Robotics Competition.  <a href="https://web.archive.org/web/20080509071600/http://www.mvrt.com/2008/clear.php">Here's what it roughly looked like at the time.</a></p>
+    <p>I was the webmaster of my high school robotics team's website, which won numerous awards including the 2008 Championship Best Website Award, given by FIRST Robotics Competition.  <a href="https://web.archive.org/web/20070224174507/http://www.mvrt.com:80/">Here's what it roughly looked like at the time.</a></p>
 
 </div>
