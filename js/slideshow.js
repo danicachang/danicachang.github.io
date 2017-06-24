@@ -560,7 +560,7 @@ var slideshow = (function(){
                 display: "none",
             });
             loading.fadeIn(1000);
-            $("#JustifiedGallery").append(loading);
+            $("body").append(loading);
             image.css("opacity","0");
             
             if (useAnimations){
