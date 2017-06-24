@@ -46,7 +46,7 @@ var slideshow = (function(){
         init();
         $("#JustifiedGallery").append("<div id='overlay'></div> \
                                     <div id='slideshowBox' class='slideshowBox'></div>");
-        $("#overlay").height($("body").height()+75).click(function(){ 
+        $("#overlay").height($("body").height()+75).click(function(){
             if(desiredSlideIndex==slideshowIndex) 
                 closeSlideshow();
         });
@@ -367,6 +367,7 @@ var slideshow = (function(){
                  photo.click(function(num){
                     return function(event){ // this function is needed for due to scoping issues of photoIndex
                         slideshowIndex = num;
+                        desiredSlideIndex = num;
                         slideshow();
                     }
                 }(photoIndex));
@@ -623,7 +624,7 @@ var slideshow = (function(){
                     
                     if (useAnimations){
                         // have the thumbnail enlarge
-                        $("#JustifiedGallery").append(image2);          
+                        $("body").append(image2);          
                         image2.animate({
                             height: image.height(),
                             width: image.width(),
@@ -699,8 +700,6 @@ var slideshow = (function(){
     function closeSlideshow(){
         enable_scroll();
         inSlideshow = 0;
-        $("#overlay").css("display","none");
-        $("body").css("overflow","");
         var image = $("#JustifiedGallery .slideshow");
         
         // image shrinks to thumbnail
@@ -714,22 +713,25 @@ var slideshow = (function(){
                 top: image.offset().top,
                 "z-index": 10
             });
-            $("#JustifiedGallery").append(image2);      
+            $("body").append(image2);
             image2.animate({
                 height: photos.eq(slideshowIndex).height(),
                 width: photos.eq(slideshowIndex).width(),
-                position: "absolute",
                 left: photos.eq(slideshowIndex).offset().left,
                 top: photos.eq(slideshowIndex).offset().top,
                 }, 1000, 
                 function(){
                     $(this).remove();   // remove the slideshow photo
                 }
-            );              
+            );
         }
-        image.remove();
+        $("#overlay").css("display","none");
+        $("body").css("overflow","");
         $("#slideshowBox #loading").css("opacity",0);
-        $("#slideshowBox").css({display:"none",opacity:0});
+        setTimeout(function() {
+            $("#slideshowBox").css({display: 'none', 'opacity': 0});
+            image.remove();   // remove the slideshow photo
+        }, 0);
         $("#close").css("display","none");
         $('body,html').animate({scrollTop:photos.eq(slideshowIndex).offset().top - .25*$(window).innerHeight()},1000); // scroll to where the slideshow photo is
     }
