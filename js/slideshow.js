@@ -54,11 +54,12 @@ var slideshow = (function(){
         var prev = $("<div>").attr("id","previous").addClass("arrow unselectable fa fa-chevron-left").css({left:0});
         var close = $("<div>").addClass("fa fa-times-circle").attr("id","close").css("display","none");
         var loading = $("<img>").attr("src","/images/loading2.gif").attr("id","loading").addClass("unselectable");
+        var fotomotoContainer = $("<div>").attr("id","fotomoto");
         
         //next.bind("click",nextSlide);
         //prev.bind("click",previousSlide);
         //close.click(function(event){closeSlideshow();});
-        $("#slideshowBox").append(next).append(prev).append(loading).append(close).css({display:"none",opacity:0});
+        $("#slideshowBox").append(next).append(prev).append(loading).append(close).append(fotomotoContainer).css({display:"none",opacity:0});
         $("#slideshowBox").mousemove(function(e){
             var direction = nextOrPrev(e);
             if (direction == "next"){
@@ -84,6 +85,7 @@ var slideshow = (function(){
         else if (jQuery(e.target).attr("id")=="previous" || jQuery(e.target).parents(".arrow").attr("id")=="previous") return "prev";   // Previous arrow
         else if (jQuery(e.target).attr("id")=="loading") return "next";// loading icon
         else if (jQuery(e.target).attr("id")=="close" || jQuery(e.target).parent().attr("id")=="close") return "close";// close icon
+        else if ($.contains($('#fotomoto'), e.target)) return "fotomoto";// buy print button
         else if ((e.offsetX || e.clientX - $(e.target).offset().left) >= $("#slideshowBox").width()/4) return "next";// mouse on right 3/4 of image
         else if ((e.offsetX || e.clientX - $(e.target).offset().left)  < $("#slideshowBox").width()/4) return "prev"; // mouse on left 1/4 of image
         else if (e.originalEvent.changedTouches[0].pageX - ($(window).width()-$("#slideshowBox").width())/2 >= $("#slideshowBox").width()/4) return "next";// tapped right 3/4 of image
@@ -236,6 +238,8 @@ var slideshow = (function(){
                         previousSlide();
                     }else if(direction=="close"){   //Click Close
                         closeSlideshow();
+                    }else if(direction=="fotomoto"){   //Buy Print Button
+                        return;
                     }else closeSlideshow();
                 }else{
                     startTime = -1;
@@ -520,6 +524,8 @@ var slideshow = (function(){
         disable_scroll();
         $('body,html').stop(); //stop animations
         $("#loadingOverThumbnail").remove();
+        var fotomotoContainer = $('#fotomoto');
+        fotomotoContainer.css('opacity', 0);
         var image = $("<img>").attr("src",$("#originals").children("a").eq(slideshowIndex).attr("href")).addClass('slideshow');
         image.on("contextmenu", function(){ return false; });
         
@@ -652,8 +658,12 @@ var slideshow = (function(){
                     }
                 }
                                 
-                
-                
+                FOTOMOTO.API.showToolbar('fotomoto', image.attr('src'));
+                if (fotomotoContainer[0].timer) clearTimeout(fotomotoContainer[0].timer);
+                fotomotoContainer[0].timer = setTimeout(function(){
+                    $('#fotomoto').animate({opacity: 1});
+                }, 4000);
+
                 inSlideshow = 1;
             };
         }(useAnimations, slideshowIndex));
