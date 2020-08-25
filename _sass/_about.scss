@@ -1,20 +1,37 @@
 .about {
     padding: 1rem;
-    h3 {
-        font-size: 2rem;
-        //display: inline-block;
-        margin: 0;
-    }
-    .profile {
-        padding-bottom: 1rem;
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        display: block;
-        @include desktop {
-            float: left;
-            padding-top: 1rem;
-            padding-right: 2rem;
+	
+	section {
+        display: flex;
+		@include mobile {
+			flex-flow: row wrap;
+			> * {
+				width: 100%;
+			}
+		}
+        > * {
+            @include desktop {
+                margin-right: 2rem;
+            }
         }
     }
+	
+	
+    h1 {
+        margin-top: 2rem;
+    }
+	
+	.profile {
+		@include desktop {
+			width: 350px;
+		}
+		@include mobile {
+			img {
+				margin: 0 auto;
+				display: block;
+				max-width: 350px;
+				width: 100%;
+			}
+		}
+	}
 }

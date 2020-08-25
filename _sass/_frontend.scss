@@ -5,7 +5,7 @@
         }
     }
     section {
-        padding: 0 0 3rem;
+        padding: 3rem 0;
         display: flex;
         flex-flow: row wrap;
         > * {
@@ -16,7 +16,7 @@
             }
         }
         @include desktop {
-            &:nth-child(even) {
+            &:nth-child(odd) {
                 .screenshot {
                     order: 10;
                 }
